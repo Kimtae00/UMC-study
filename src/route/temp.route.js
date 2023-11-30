@@ -1,8 +1,9 @@
 // temp.route.js
 
 import express from 'express';
-import { tempTest } from '../controllers/temp.controller.js';
+import { tempTest, tempException } from '../controller/temp.controller';
 
 export const tempRouter = express.Router();
 
 tempRouter.get('/test', tempTest);
+tempRouter.get('/exception/:flag',tempException);
